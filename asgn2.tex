@@ -1,0 +1,297 @@
+%\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}  
+\usepackage{tikz}
+\usepackage{circuitikz} 
+\usepackage{caption}
+
+\def\inputGnumericTable{}                                
+\usepackage[latin1]{inputenc}                 
+\usepackage{color}                            
+\usepackage{array}                            
+\usepackage{longtable}                        
+\usepackage{calc}                            
+\usepackage{multirow}                      
+\usepackage{hhline}                           
+\usepackage{ifthen}                          
+\usepackage{lscape}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+
+
+
+%	\logo{
+
+
+%	}
+\title{JEE ADVANCED}
+\author{Suraj Kolluru
+
+EE24BTECH110033
+}	
+
+%\title{
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{<-this % stops a space
+%\thanks{}}
+%}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+%\renewcommand{\theequation}{\theenumi}
+
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitl
+
+
+
+\maketitle \textbf{1.Multiple Choice Questions}
+\begin{enumerate}
+    \item Let f$(x)$ be a polynomial function of second degree.If f$(1)$=f$(-1)$ and a,b,c are in A.P, then $f'(a),f'(b),f'(c)$ are in
+    \hfill[2003]\break
+    \begin{enumerate}
+    \item Arthemetic-Geometric Progression
+    \item A.P
+    \item G.P
+    \item H.P\\
+    
+    \end{enumerate}
+    \item If x=$e^{y+e^{y+e^{y+---\infty}}}$ ,$x>0$, then $\frac{dy}{dx}$ is
+    \hfill[2004]\break
+    \begin{enumerate}
+    \item $\frac{1+x}{x}$
+    \item $\frac{1}{x}$
+    \item $\frac{1-x}{x}$
+    \item $\frac{x}{1+x}$\\
+\end{enumerate}
+\item The value of a for which the sum of the squares of the roots of the equation $x^2-\brak{a-2}x-a-1=0$ assume the least value is
+\hfill[2005]\break
+\begin{enumerate}
+    \item 1
+    \item 0
+    \item 3
+    \item 2\\
+    \end{enumerate}
+    \item If the roots of the equation $x^2-bx+c=0$ be   two  consecutive integers, then $b^2-4c$  equals  to
+    \hfill[2005]\break
+    \begin{enumerate}
+        \item -2
+        \item 3
+        \item 2
+        \item 1\\
+    \end{enumerate}
+    \item Let $f:R\longrightarrow R$ be a differentiable function having $f\brak{2}=6$,$f'(2)=(\frac{1}{48})$.Then $\lim_{x\to\ 2} \int_{6}^{f(x)} \frac{4t^3}{x-2} dt$ equals to
+    \hfill[2005]\break
+    \begin{enumerate}
+    \item 24
+    \item 36
+    \item 12
+    \item 18\\
+    \end{enumerate}
+    \item The set of points where $f(x)=\frac{x}{1+\abs{x}}$ is differentiable is \hfill[2006]\break
+    \begin{enumerate}
+    \item $\brak{-\infty,0}\bigcup\brak{0,\infty}$
+    \item $\brak{-\infty,-1}\bigcup\brak{-1,\infty}$
+    \item $\brak{-\infty,\infty}$
+    \item ${0,\infty}$\\
+    \end{enumerate}
+    \item If $x^m.y^n={x+y}^{m+n}$ ,then $\frac{dy}{dx}$ is \hfill[2006]\break
+    \begin{enumerate}
+    \item $\frac{y}{x}$
+    \item $\frac{x+y}{xy}$
+    \item $xy$
+    \item $\frac{x}{y}$\\
+    \end{enumerate}
+    \item Let $y$ be an implicit function of x defined by $x^{2x}-2x^xcoty-1=0$.Then $y'(1)$ equals
+
+    \hfill[2009]\break
+    \begin{enumerate}
+    \item 1
+    \item $\log2$
+    \item -$\log2$
+    \item -1\\
+    \end{enumerate}
+    \item Let $f:(-1,1)\rightarrow\vec{R}$ be a differentiable function with$f(0)=-1$ and $f'(0)=1$.Let $g(x)=[f(2f(x)+2)]^2$.Then$g'(0)=$
+	    \hfill[2010]
+	    \begin{enumerate}
+	\item -4
+	\item 0
+	\item -2
+	\item 4\\
+	    \end{enumerate}
+    \item $\frac{d^2x}{dy^2}$equals:\hfill[JEE M 2013]\break
+	    \begin{enumerate}
+		    \item  $-\brak{{\frac{d^2y}{dx^2}}}^{-1}\brak{{\frac{dy}{dx}}}^{-3}$
+		    \item $\brak{{\frac{d^2y}{dx^2}}}\brak{{\frac{dy}{dx}}}^{-2}$
+
+		    \item $-\brak{{\frac{d^2y}{dx^2}}}\brak{{\frac{dy}{dx}}}^{-3}$
+		    \item $\brak{\frac{d^2y}{dx^2}}^{-1}$\\
+	    \end{enumerate}
+    \item If $y=\sec(\tan^{-1}x)$,then $\frac{dy}{dx}$ at $x$=1 is equal to:
+    \hfill[JEE M 2013]
+\break
+     \begin{enumerate}
+     \item $\frac{1}{\sqrt{2}}$
+     \item $\frac{1}{2}$
+     \item 1
+     \item $\sqrt{2}$\\
+     \end{enumerate}
+      \item If $g$ is the inverse of a function $f$ and $f'\brak{x}$=$\frac{1}{1+x^5}$,then $g'(x)$ is equal to:
+      \hfill[JEE M 2014]\break
+      \begin{enumerate}
+      \item $\frac{1}{1+\brak{{g(x)}}^5}$
+      \item 1+$\brak{{g(x)}}$
+      \item $1+x^5$
+      \item $5x^4$\\
+      \end{enumerate}
+      \item If $x$=-1 and $x$=2 are extreme points of $f(x)=\alpha\log\abs{x}+\beta x^2+x$ then 
+	      \hfill[JEE M 2014]
+	      \begin{enumerate}
+		      \item $\alpha=2,\beta=-\frac{1}{2}$
+		      \item $\alpha=2,\beta=\frac{1}{2}$
+		      \item $\alpha=-6,\beta=\frac{1}{2}$
+		      \item $\alpha=-6,\beta=-\frac{1}{2}$\\
+	      \end{enumerate}
+      \item If for x$\in\brak{0,\frac{1}{4}}$,the derivative of $\tan^{-1}\brak{\frac{6x\sqrt{2}}{1-9x^3}}$ is $\sqrt{x}.g(x)$,then g(x) equals:
+	      \hfill[JEE M 2017]\break
+	      \begin{enumerate}
+		      \item $\frac{3}{1+9x^3}$
+		      \item $\frac{9}{1+9x^3}$
+		      \item $\frac{3x\sqrt{x}}{1-9x^3}$
+		      \item $\frac{3x}{1-9x^3}$
+	      \end{enumerate}
+	      \end{enumerate}
+	      \end{document}
+
+
+
+
